@@ -19,7 +19,9 @@ int main(int argc, char* argv[])
 	{
 		unsigned x(randint(x_max));
 		unsigned y(randint(y_max));
-
+		std::stringstream formatter;
+		formatter << "adb shell input tap " << x << ' ' << y;
+		system(formatter.str().c_str());
 	}
     return 0;
 }
