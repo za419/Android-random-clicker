@@ -24,6 +24,7 @@ int __cdecl main(int argc, char* argv[])
 		unsigned y(randint(y_max));
 		std::stringstream formatter;
 		formatter << "adb shell input tap " << x << ' ' << y;
+		std::clog << formatter.str().c_str() << std::endl;
 		system(formatter.str().c_str());
 	}
     return 0;
