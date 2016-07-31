@@ -6,6 +6,7 @@
 
 void usage(const char* prog);
 unsigned randint(unsigned max);
+std::minstd_rand generator;
 
 int __cdecl main(int argc, char* argv[])
 {
@@ -37,7 +38,6 @@ void usage(const char* prog)
 
 unsigned randint(unsigned max)
 {
-	std::minstd_rand generator;
 	std::uniform_int_distribution<unsigned> distribution(0, max);
 	return distribution(generator);
 }
