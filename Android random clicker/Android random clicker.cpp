@@ -10,7 +10,10 @@ unsigned randint(unsigned max);
 int main(int argc, char* argv[])
 {
 	if (argc != 5)
+	{
 		usage(argv[0]);
+		return 0;
+	}
 	_chdir(argv[1]);
 	unsigned x_max(atoi(argv[2]));
 	unsigned y_max(atoi(argv[3]));
@@ -26,3 +29,7 @@ int main(int argc, char* argv[])
     return 0;
 }
 
+void usage(const char* prog)
+{
+	std::cout << "Usage: " << prog << " path-to-adb x-max y-max number-of-clicks\n";
+}
