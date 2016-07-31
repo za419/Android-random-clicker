@@ -8,6 +8,8 @@
 #include "targetver.h"
 
 #include <iostream>
+#include <sstream>
+
 #include <cstdlib>
 #include <direct.h>
 
