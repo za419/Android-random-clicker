@@ -15,7 +15,11 @@ int __cdecl main(int argc, char* argv[])
 		usage(argv[0]);
 		return 0;
 	}
-	_chdir(argv[1]);
+	if (_chdir(argv[1]))
+	{
+		perror("An error occurred:");
+		return 1;
+	}
 	unsigned x_max(atoi(argv[2]));
 	unsigned y_max(atoi(argv[3]));
 	unsigned num(atoi(argv[4]));
