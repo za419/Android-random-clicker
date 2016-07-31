@@ -7,7 +7,7 @@
 
 #include "targetver.h"
 
-#include <cstdio>
+#include <iostream>
 #include <cstdlib>
 #include <direct.h>
 
