@@ -33,3 +33,10 @@ void usage(const char* prog)
 {
 	std::cout << "Usage: " << prog << " path-to-adb x-max y-max number-of-clicks\n";
 }
+
+unsigned randint(unsigned max)
+{
+	std::minstd_rand generator;
+	std::uniform_int_distribution<unsigned> distribution(0, max);
+	return distribution(generator);
+}
