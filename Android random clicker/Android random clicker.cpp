@@ -7,7 +7,7 @@
 void usage(const char* prog);
 unsigned randint(unsigned max);
 
-int main(int argc, char* argv[])
+int __cdecl main(int argc, char* argv[])
 {
 	if (argc != 5)
 	{
